@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body,
+input,
+button {
+  font: 14px 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-90deg, #0187ff, #2dcdff);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.search-cep {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.search-cep form {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px 5px 10px;
+  position: relative;
+}
+
+.search-cep form input {
+  width: 85%;
+  position: relative;
+  background: #f1f1f1;
+  border: 0;
+  height: 50px;
+  padding: 0 5px;
+  color: #455463;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #455463;
+  border-bottom-style: dotted;
+  z-index: 2;
+}
+
+.search-cep form input::placeholder {
+  color: #455463;
+}
+
+.search-cep form button {
+  width: 15%;
+  margin: 15px 0 0 10px;
+  height: 50px;
+  background: #f1f1f1;
+  font-weight: bold;
+  color: #109fff;
+  border: 1px solid #109fff;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.search-cep form button:hover {
+  background: rgba(16, 159, 255, 0.5);
+  color: #f1f1f1;
+}
+
+.info {
+  margin: 0 0 10px 15px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.info strong {
+  font-size: 18px;
+}
+
+.map {
+  border: 1px solid #f1f1f1;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search-cep form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-cep form input {
+    width: 100%;
+  }
+
+  .search-cep form button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .search-cep form input {
+    width: 70%;
+  }
+
+  .search-cep form button {
+    width: 30%;
+  }
+}

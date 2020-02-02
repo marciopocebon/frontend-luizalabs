@@ -5,8 +5,7 @@ import { Form, Input } from '@rocketseat/unform';
 import Geocode from 'react-geocode';
 import api from './services/api';
 
-import GlobalStyles from './styles/global';
-import { All, Container, Content, Map } from './styles';
+import './app.css';
 
 function App() {
   const [cep, setCep] = useState('');
@@ -67,10 +66,9 @@ function App() {
 
   return (
     <>
-      <GlobalStyles />
-      <All>
-        <Container>
-          <Content>
+      <div className="container">
+        <div className="content">
+          <div className="search-cep">
             <Form onSubmit={handleAddress}>
               <Input
                 name="cep"
@@ -89,9 +87,8 @@ function App() {
               </div>
               <div>{address.cep}</div>
             </div>
-            <Map>
+            <div className="map">
               <ReactMapGL
-                // eslint-disable-next-line react/jsx-props-no-spreading
                 {...viewport}
                 width="100%"
                 height="75vh"
@@ -106,10 +103,10 @@ function App() {
                   <MdRoom size={35} color="#F44336" />
                 </Marker>
               </ReactMapGL>
-            </Map>
-          </Content>
-        </Container>
-      </All>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
